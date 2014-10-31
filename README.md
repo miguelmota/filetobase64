@@ -1,8 +1,16 @@
 # File to Base64
 
-Takes in a File object and returns a base64 string with the help of the `[FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)` API.
+Takes in a File object and returns a base64 string with the help of the [`FileReader`](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) API.
 
+# Install
+
+```bash
+bower install filetobase64
 ```
+
+# Usage
+
+```html
 <input type="file" id="file" multiple>
 
 <img id="output">
