@@ -2,6 +2,10 @@
 
 Takes in a File object and returns a base64 string with the help of the [`FileReader`](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) API.
 
+# Example
+
+[http://lab.moogs.io/filetobase64](http://lab.moogs.io/filetobase64)
+
 # Install
 
 ```bash
