@@ -19,7 +19,7 @@ bower install filetobase64
 
 <img id="output">
 
-<script src=".filetobase64.js"></script>
+<script src="filetobase64.js"></script>
 ```
 
 ```javascript
