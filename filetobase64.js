@@ -26,6 +26,17 @@
     fr.readAsBinaryString(file);
   }
 
-  this.fileToBase64 = fileToBase64;
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = fileToBase64;
+    }
+    exports.fileToBase64 = fileToBase64;
+  } else if (typeof define === 'function' && define.amd) {
+    define([], function() {
+      return fileToBase64;
+    });
+  } else {
+    this.fileToBase64 = fileToBase64;
+  }
 
 }).call(this);

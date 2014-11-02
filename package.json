@@ -1,6 +1,6 @@
 {
   "name": "filetobase64",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "File to base64",
   "main": "filetobase64.js",
   "directories": {
