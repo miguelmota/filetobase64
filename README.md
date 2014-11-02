@@ -12,6 +12,12 @@ Takes in a File object and returns a base64 string with the help of the [`FileRe
 bower install filetobase64
 ```
 
+```bash
+npm install filetobase64
+
+var fileToBase64 = require('filetobase64');
+```
+
 # Usage
 
 ```html
