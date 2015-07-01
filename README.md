@@ -19,7 +19,7 @@ npm install filetobase64
 # Usage
 
 ```html
-<input type="file" id="file" multiple>
+<input type="file" id="file" accept="image/*">
 
 <img id="output">
 
@@ -30,18 +30,16 @@ npm install filetobase64
 var fileInput = document.getElementById('file');
 var output = document.getElementById('output');
 
-fileInput.onchange = function(e) {
+fileInput.addEventListener('change', function(e) {
   var file = e.currentTarget.files[0];
-
-  var base64 = fileToBase64(file);
 
   fileToBase64(file, function(base64) {
     console.log(base64); // iVBORw0KGgoAAAANSUhEUgAAADY...
 
-    output.src = ['data:image/png;base64,', base64].join('');
+    output.src = 'data:' + file.type + ';base64, + base64
   });
 
-};
+}, false);
 ```
 
 # License
