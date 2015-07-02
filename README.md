@@ -36,7 +36,7 @@ fileInput.addEventListener('change', function(e) {
   fileToBase64(file, function(base64) {
     console.log(base64); // iVBORw0KGgoAAAANSUhEUgAAADY...
 
-    output.src = 'data:' + file.type + ';base64, + base64
+    output.src = 'data:' + file.type + ';base64,' + base64
   });
 
 }, false);
