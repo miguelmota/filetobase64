@@ -4,7 +4,7 @@ Takes in a File object and returns a base64 string with the help of the [`FileRe
 
 # Demo
 
-[http://lab.moogs.io/filetobase64](http://lab.moogs.io/filetobase64)
+[https://lab.miguelmota.com/filetobase64](https://lab.miguelmota.com/filetobase64)
 
 # Install
 
