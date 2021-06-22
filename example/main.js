@@ -3,16 +3,37 @@ var $ = document;
 var fileInput = $.getElementById('file');
 var output = $.getElementById('output');
 var text = $.getElementById('text');
+var includeMime = $.getElementById('includeMime');
 
-fileInput.onchange = function(e) {
-  var file = e.currentTarget.files[0];
+fileInput.value = '';
+text.value = '';
 
-  fileToBase64(file, function(base64) {
-    console.log(base64); // iVBORw0KGgoAAAANSUhEUgAAADY...
+var base64;
+var file;
 
-    text.value = base64;
+function update() {
+  if (!file) return;
+  if (!base64) return;
+  var prefixed = 'data:' + file.type + ';base64,' + base64;
+  text.value = includeMime.checked ? prefixed : base64;
+  text.style.display = 'block';
+  output.src = prefixed;
+}
 
-    output.src = ['data:image/png;base64,', base64].join('');
+text.onfocus = function(event) {
+  text.select();
+}
+
+includeMime.onchange = function(event) {
+  update();
+}
+
+fileInput.onchange = function(event) {
+  file = event.currentTarget.files[0];
+
+  fileToBase64(file, function(_base64) {
+    base64 = _base64
+    console.log(base64);
+    update();
   });
-
 };

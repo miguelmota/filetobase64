@@ -8,11 +8,22 @@
 <body>
   <p>Takes in a File object and returns a base64 string with the help of the FileReader API.<p>
 
-  <input type="file" id="file" multiple>
+  <div>
+    <input type="file" id="file" multiple>
+  </div>
+  <div>
+  <label>
+    <input type="checkbox" id="includeMime">
+    Include MIME type
+  </label>
+  <div>
+  <div>
+    <textarea id="text" style="display:none;width:320px;height:200px;"></textarea>
+  </div>
 
-  <textarea id="text"></textarea>
-
-  <img id="output">
+  <div>
+    <img id="output" style="max-width:100%;" />
+  </div>
 
   <script src="../filetobase64.js"></script>
   <script src="main.js"></script>

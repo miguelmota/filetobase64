@@ -9,10 +9,6 @@ Takes in a File object and returns a base64 string with the help of the [`FileRe
 # Install
 
 ```bash
-bower install filetobase64
-```
-
-```bash
 npm install filetobase64
 ```
 
@@ -27,19 +23,19 @@ npm install filetobase64
 ```
 
 ```javascript
-var fileInput = document.getElementById('file');
-var output = document.getElementById('output');
+var fileInput = document.getElementById('file')
+var output = document.getElementById('output')
 
-fileInput.addEventListener('change', function(e) {
-  var file = e.currentTarget.files[0];
+fileInput.addEventListener('change', function(event) {
+  var file = event.currentTarget.files[0]
 
   fileToBase64(file, function(base64) {
-    console.log(base64); // iVBORw0KGgoAAAANSUhEUgAAADY...
+    console.log(base64) // iVBORw0KGgoAAAANSUhEUgAAADY...
 
-    output.src = 'data:' + file.type + ';base64,' + base64;
-  });
+    output.src = 'data:' + file.type + ';base64,' + base64
+  })
 
-}, false);
+}, false)
 ```
 
 # License
